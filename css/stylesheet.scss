@@ -120,9 +120,12 @@ section {
         @include centerView();
         width: 100%;
         visibility: visible;
-        @include respond(md) {
-            height: 100vh;
+        @include respond(lg) {
+            height: 100%;
             width: auto;
+        }
+        @include respond(md) {
+            visibility: hidden;
         }
         @include respond(sm) {
             visibility: hidden;
@@ -133,7 +136,7 @@ section {
         visibility: hidden;
         width: 100%;
         @include respond(md) {
-        
+            visibility: visible;
         }
         @include respond(sm) {
             visibility: visible;
@@ -153,6 +156,10 @@ section {
         width: 70.5%;
         padding: 80px;      
         text-align: center;
+        @include respond(lg){
+            padding: 5% 5%;
+            width: 90%;
+        }
         @include respond(md) {
             width: 80%;
             margin: auto;
@@ -166,7 +173,10 @@ section {
         max-width: 1068px;
         margin:  auto;
         margin-bottom: 5rem;
-        @include respond(md) {
+        @include respond(lg) {
+            margin-bottom: 3rem;
+        }
+        @include respond(md){
 
         }
         @include respond(sm) {
@@ -237,6 +247,11 @@ background: linear-gradient(180deg, rgba(234,244,236,0) 0%, rgba(234,244,236,1) 
         bottom: 0;
         z-index: 1;
     }
+    @include respond(lg){
+        .text {
+            font-size: 10rem !important;
+        }
+    }
     @include respond(md) {
         .text {
             font-size: 12vw !important;
@@ -297,6 +312,10 @@ background: linear-gradient(180deg, rgba(234,244,236,0) 0%, rgba(234,244,236,1) 
         width: 70.5%;
         padding: 80px;      
         text-align: center;
+        @include respond(lg){
+            padding: 5% 5%;
+            width: 90%;
+        }
         @include respond(md) {
             width: 80%;
             margin: auto;
@@ -310,8 +329,11 @@ background: linear-gradient(180deg, rgba(234,244,236,0) 0%, rgba(234,244,236,1) 
             max-width: 1100px;
             margin:  auto;
             margin-bottom: 5rem;
+            @include respond(lg){
+                margin-bottom: 3rem;
+            }
             @include respond(md) {
-
+                margin-bottom: 3rem;
             }
             @include respond(sm) {
                 margin-bottom: 3rem;
@@ -397,6 +419,11 @@ background: linear-gradient(180deg, rgba(234,244,236,0) 0%, rgba(234,244,236,1) 
             &:hover{
                 text-decoration: underline;
             }
+        }
+    }
+    @include respond(lg){
+        .social-wrap{
+            width: 100%;
         }
     }
     @include respond(md) {

@@ -128,17 +128,29 @@ section {
   visibility: visible;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1440px) {
   #section-1 .video-head-lg {
-    height: 100vh;
+    height: 100%;
     width: auto;
   }
 }
 
 @media (max-width: 480px) {
   #section-1 .video-head-lg {
-    height: 100vh;
+    height: 100%;
     width: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  #section-1 .video-head-lg {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  #section-1 .video-head-lg {
+    visibility: hidden;
   }
 }
 
@@ -156,6 +168,18 @@ section {
           transform: translate(-50%, -50%);
   visibility: hidden;
   width: 100%;
+}
+
+@media (max-width: 1024px) {
+  #section-1 .video-head-sm {
+    visibility: visible;
+  }
+}
+
+@media (max-width: 480px) {
+  #section-1 .video-head-sm {
+    visibility: visible;
+  }
 }
 
 @media (max-width: 480px) {
@@ -184,6 +208,20 @@ section {
   text-align: center;
 }
 
+@media (max-width: 1440px) {
+  #section-2 .about-c3 {
+    padding: 5% 5%;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  #section-2 .about-c3 {
+    padding: 5% 5%;
+    width: 90%;
+  }
+}
+
 @media (max-width: 1024px) {
   #section-2 .about-c3 {
     width: 80%;
@@ -210,6 +248,18 @@ section {
   max-width: 1068px;
   margin: auto;
   margin-bottom: 5rem;
+}
+
+@media (max-width: 1440px) {
+  #section-2 .title, #section-2 .headline, #section-2 .description {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #section-2 .title, #section-2 .headline, #section-2 .description {
+    margin-bottom: 3rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -288,6 +338,18 @@ section {
   position: absolute;
   bottom: 0;
   z-index: 1;
+}
+
+@media (max-width: 1440px) {
+  #section-3 .text {
+    font-size: 10rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  #section-3 .text {
+    font-size: 10rem !important;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -393,6 +455,20 @@ section {
   text-align: center;
 }
 
+@media (max-width: 1440px) {
+  #section-4 .sustainability {
+    padding: 5% 5%;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  #section-4 .sustainability {
+    padding: 5% 5%;
+    width: 90%;
+  }
+}
+
 @media (max-width: 1024px) {
   #section-4 .sustainability {
     width: 80%;
@@ -413,6 +489,30 @@ section {
   max-width: 1100px;
   margin: auto;
   margin-bottom: 5rem;
+}
+
+@media (max-width: 1440px) {
+  #section-4 .sustainability .title, #section-4 .sustainability .headline, #section-4 .sustainability .description {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #section-4 .sustainability .title, #section-4 .sustainability .headline, #section-4 .sustainability .description {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  #section-4 .sustainability .title, #section-4 .sustainability .headline, #section-4 .sustainability .description {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #section-4 .sustainability .title, #section-4 .sustainability .headline, #section-4 .sustainability .description {
+    margin-bottom: 3rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -522,6 +622,18 @@ section {
 
 #section-6 .social-list a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 1440px) {
+  #section-6 .social-wrap {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #section-6 .social-wrap {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1024px) {
