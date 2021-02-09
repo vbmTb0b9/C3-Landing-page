@@ -95,11 +95,12 @@ section {
     overflow: hidden;
     .scrolldown{
         position: absolute;
-        width:64px;
+        width: 64px;
         z-index: 999;
         bottom: 0;
         left: 50%;
         opacity: 0.6;
+        transform: translate(-50%, -50%);
     }
     .video-head-lg {
         @include centerView();
