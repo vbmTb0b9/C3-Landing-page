@@ -8,12 +8,21 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title> C3 | Merch</title>
-    <meta name="description" content="The place where you can discover and buy merchandise from channel 3 favourite artists. พบกันเร็วๆ นี้">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <meta property=“og:image” content=“” /> url image share -->
-    <meta property=”og:image:width” content=”1200″ />
-    <meta property=”og:image:height” content=”628″ />
+    <title> C3 | Merch</title>
+    <!-- <meta property="og:url"                content="http://www.nytimes.com/2015/02/19/arts/international/when-great-minds-dont-think-alike.html" /> -->
+
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="C3" />
+    <meta property="og:description"        content="The place where you can discover and buy merchandise from channel 3 favourite artists. พบกันเร็วๆ นี้" />
+    <meta property="og:image"              content="fbshare.png" />
+    <meta property=”og:image:width”        content="1200" />
+    <meta property=”og:image:height”       content="628" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png"> 
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/fonts.css">
 
@@ -24,22 +33,26 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <section id="section-1">
+        <div  id="sound-btn">
+            <img src="img/muted.svg" alt="" onclick="toggleMute()">
+            <img src="img/unmuted.svg" alt="" onclick="toggleMute()" style="display: none;">
+        </div>
         <div class="scrolldown">
             <svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#FFFFFF;}
+	.st0{fill:#8d8d8d;}
 	.st1{fill:none;}
 </style>
 <polygon class="st0" points="16,22 6,12 7.4,10.6 16,19.2 24.6,10.6 26,12 "/>
 <rect id="_x3C_Transparent_Rectangle_x3E_" class="st1" width="32" height="32"/>
 </svg>
         </div>
-        <video autoplay muted class="video-head-lg">
+        <video autoplay muted playsinline class="video-head-lg" id="video">
             <source src="video/C3_TEASER_1920x1080_FINAL.webm" type="video/webm" id="video-lg">
             <source src="video/C3_TEASER_1920x1080_FINAL.mp4" type="video/mp4" id="video-lg">
         </video>
-        <video autoplay muted class="video-head-sm">
+        <video autoplay muted playsinline class="video-head-sm" id="video">
             <source src="video/C3_TEASER_1080x1920_FINAL.webm" type="video/webm" id="video-sm">
             <source src="video/C3_TEASER_1080x1920_FINAL.mp4" type="video/mp4" id="video-sm">
         </video>
@@ -126,6 +139,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/CSSRulePlugin.min.js"></script>
+    <script>
+        function toggleMute() {
+            var video = document.getElementById('video');
+
+            $("#sound-btn").find('img').toggle();
+        video.muted = !video.muted;
+      };
+    </script>
 </body>
 
 </html>
