@@ -14,18 +14,6 @@ body {
 video::-internal-media-controls-overlay-cast-button {
     display: none;
 }
-.scrolldown{
-    position: absolute;
-    z-index: 999;
-    bottom: 10px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    svg {
-        width: auto;
-        height: 32px;
-        fill: #5e6360;
-    }
-}
 @mixin centerView {
     top: 50%;
     left: 50%;
@@ -40,7 +28,7 @@ video::-internal-media-controls-overlay-cast-button {
     @if($breakpoint == md)  {
       @media (max-width: 1024px) { @content }
     }
-    @if($breakpoint == s,)  {
+    @if($breakpoint == sm)  {
       @media (max-width: 480px) { @content }
     }
   }
@@ -62,6 +50,26 @@ section {
         height: 24px;
     }
 }
+
+.scrolldown{
+    position: absolute;
+    z-index: 999;
+    bottom: 5vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    svg {
+        width: auto;
+        height: 32px;
+        fill: #5e6360;
+    }
+    @include respond(md){}
+    @include respond(sm){
+        svg{
+            height: 24px;
+        }
+    }
+}
+
 .title {
     font-family: 'Helvetica Neue';
     font-size : 1.0625rem;
@@ -116,18 +124,7 @@ section {
         top: 1%;
         opacity: 0.6;
     }
-    .scrolldown{
-        position: absolute;
-        z-index: 999;
-        width: 100%;
-        text-align: center;
-        bottom: 0;
-        // opacity: 0.6;
-        svg {
-            width: 64px;
-
-        }
-    }
+   
     .video-head-lg {
         @include centerView();
         width: 100%;
@@ -162,6 +159,11 @@ section {
     background-image: url(../img/pexels-ksenia-chernaya-3965543bw.jpg);
     background-size: cover;
     position: relative;
+    .scrolldown{
+        svg{
+            fill:#fff;
+        }
+    }
     .about-c3 {
         @include centerView();
         background-color: #EAF4EC;
@@ -331,7 +333,7 @@ background: linear-gradient(180deg, rgba(234,244,236,0) 0%, rgba(234,244,236,1) 
         @include respond(md) {
             width: 80%;
             margin: auto;
-            padding: 40px;
+            padding: 0;
             
           }
         @include respond(sm) {
