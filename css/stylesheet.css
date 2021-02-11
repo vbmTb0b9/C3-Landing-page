@@ -38,7 +38,7 @@ section {
 .scrolldown {
   position: absolute;
   z-index: 999;
-  bottom: 5vw;
+  bottom: 7vh;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
