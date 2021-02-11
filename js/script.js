@@ -7,11 +7,15 @@ $( document ).ready(function() {
             artistSection = gsap.timeline();
             sustainSection = gsap.timeline();
             soonSection = gsap.timeline();
+            scrollAni = gsap.timeline();
+
+    scrollAni.fromTo("#scroll-1", 1, {y:-3}, {y:3, ease:Linear.easeNone, repeat:-1});
 
     aboutusSection.from("#section-2 .title",1 ,{opacity:0, ease: "expo.inOut"})
     .from("#section-2 .headline",2 ,{opacity:0, ease: "expo.inOut"})
     .from("#section-2 .description",3 ,{opacity:0, ease: "expo.inOut"})
-    .from("#section-2 .logo-c3-footer",4 ,{opacity:0, ease: "expo.inOut"});
+    .from("#section-2 .logo-c3-footer",4 ,{opacity:0, ease: "expo.inOut"})
+    .from("#section-2 .scrolldown",5 ,{opacity:0, ease: "expo.inOut"});
     
 
     artistSection.from(".top-row", {yPercent:100, opacity:1, ease: "expo.out", duration:1})
@@ -21,12 +25,14 @@ $( document ).ready(function() {
     .to(".top-row", {yPercent:-20, duration:3, ease: "power4.out"})
     .to(".bottom-row",{yPercent:-20, duration:3, ease: "power4.out"}, "<")
     .to(overlayTopGradient, {duration:1, opacity:1, yPercent: 100}, "<")
-    .from(".overlay-text", {duration: 3, yPercent: 100}, "<");
+    .from(".overlay-text", {duration: 3, yPercent: 100}, "<")
+    .from("#section-3 .scrolldown",5 ,{opacity:0, ease: "expo.inOut"});
 
     sustainSection.from("#section-4 .title", {opacity:0,})
     .from("#section-4 .headline", {opacity:0,})
     .from("#section-4 .description", {opacity:0,})
-    .from("#section-4 .logo-c3-footer", {opacity:0, ease: "expo.inOut",});
+    .from("#section-4 .logo-c3-footer", {opacity:0, ease: "expo.inOut",})
+    .from("#section-4 .scrolldown",5 ,{opacity:0, ease: "expo.inOut"});
     
     soonSection.from("#section-6 h1", {opacity:0, duration:2 , ease: "power4.in",})
     .from("#section-6 h2", {opacity:0, duration:2 , ease: "power4.in",})

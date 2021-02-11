@@ -14,6 +14,18 @@ body {
 video::-internal-media-controls-overlay-cast-button {
     display: none;
 }
+.scrolldown{
+    position: absolute;
+    z-index: 999;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    svg {
+        width: auto;
+        height: 32px;
+        fill: #5e6360;
+    }
+}
 @mixin centerView {
     top: 50%;
     left: 50%;
